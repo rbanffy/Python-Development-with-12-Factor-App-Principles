@@ -1,0 +1,8 @@
+[project]
+name = "twelve-factor-python-collector"
+version = "0.1.0"
+description = "Twelve-Factor Python Collector"
+dependencies = ["requests"]
+
+[project.scripts]
+collect = "main:cli"

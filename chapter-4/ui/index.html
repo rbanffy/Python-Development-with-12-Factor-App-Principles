@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>12-Factor Python</title>
+</head>
+
+<body>
+    <h1>12-Factor Python Example Application</h1>
+    <button onclick="retrieveContent()">Retrieve Content</button>
+    <div id="content"></div>
+</body>
+<script>
+    async function retrieveContent() {
+        const response = await fetch("data.json");
+        if (response.ok) {
+            const data = await response.json();
+            document.getElementById("content").innerHTML = data["temp"];
+        }
+    }
+</script>
+
+</html>
